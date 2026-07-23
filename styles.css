@@ -1,0 +1,121 @@
+@import url("https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600&family=Manrope:wght@600;700;800&display=swap");
+
+:root {
+  --bg: #f7f9fc;
+  --card: #ffffff;
+  --text: #132238;
+  --muted: #5a6a7d;
+  --accent: #1a7d56;
+  --link: #275dc7;
+  --border: #dbe4ef;
+  --shadow: 0 8px 22px rgba(19, 34, 56, 0.08);
+}
+
+* { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  font-family: "IBM Plex Sans", "Segoe UI", sans-serif;
+  color: var(--text);
+  line-height: 1.62;
+  background: var(--bg);
+}
+
+.container {
+  max-width: 860px;
+  margin: 0 auto;
+  padding: 28px 18px 50px;
+}
+
+.hero,
+.page-header {
+  margin-bottom: 22px;
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: 16px;
+  box-shadow: var(--shadow);
+  padding: 16px 18px;
+}
+
+.eyebrow {
+  margin: 0 0 8px;
+  color: var(--accent);
+  font: 800 0.78rem "Manrope", "IBM Plex Sans", sans-serif;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+}
+
+h1 {
+  margin: 0 0 8px;
+  font: 800 clamp(1.68rem, 1.48rem + 0.95vw, 2.1rem) "Manrope", "IBM Plex Sans", sans-serif;
+  line-height: 1.15;
+}
+
+.lead { margin: 0 0 6px; color: var(--muted); }
+
+.meta { margin: 0; color: var(--muted); font-size: 0.9rem; }
+
+.links {
+  display: grid;
+  gap: 12px;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  margin: 20px 0 14px;
+}
+
+.card-link {
+  display: block;
+  padding: 14px 16px;
+  border-radius: 14px;
+  border: 1px solid var(--border);
+  background: var(--card);
+  color: var(--text);
+  font-weight: 700;
+  text-decoration: none;
+  box-shadow: 0 5px 14px rgba(19, 34, 56, 0.07);
+  transition: border-color 140ms ease, transform 140ms ease;
+}
+
+.card-link:hover {
+  border-color: #b9c9dc;
+  transform: translateY(-1px);
+}
+
+section {
+  margin-bottom: 10px;
+  padding: 14px 16px;
+  border-radius: 14px;
+  border: 1px solid var(--border);
+  background: var(--card);
+}
+
+section h2 {
+  margin: 0 0 8px;
+  font: 700 1.05rem "Manrope", "IBM Plex Sans", sans-serif;
+}
+
+ul { margin: 8px 0 0 18px; }
+
+.back-link {
+  color: var(--link);
+  font-weight: 700;
+  text-decoration: none;
+}
+
+.back-link:hover { text-decoration: underline; }
+
+.footer { color: var(--muted); font-size: 0.9rem; }
+
+@media (max-width: 640px) {
+  .container { padding: 68px 12px 34px; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
